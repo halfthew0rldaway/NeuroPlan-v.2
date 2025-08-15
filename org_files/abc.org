@@ -1,0 +1,14 @@
+#+TITLE: abc
+
+* abc 
+:PROPERTIES:
+:id: 3519742d-87dd-4227-a86b-ca1f3067da57
+:author: bleu
+:status: TODO
+:priority: D
+:created_at: 2025-07-27T15:48:51.247294
+:END:
+
+idkrt typing your description here... 
+abc
+

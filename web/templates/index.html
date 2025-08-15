@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>NeuroPlan - 3D Task Graph</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/three@0.158.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/3d-force-graph@1.70.19/dist/3d-force-graph.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <div class="loading-overlay" id="loading">
+        <div class="loading-text">Initializing NeuroPlan 3D...</div>
+    </div>
+
+    <video id="webcam-background" autoplay muted playsinline></video>
+    
+    <canvas id="hand-overlay"></canvas>
+
+    <div class="neuroplan-title">NeuroPlan 3D</div>
+
+    <button id="theme-switcher" title="Toggle Theme">
+        <svg id="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM5.166 17.834a.75.75 0 00-1.06 1.06l1.59 1.591a.75.75 0 001.061-1.06l-1.59-1.591zM4.5 12a.75.75 0 01-.75.75H1.5a.75.75 0 010-1.5h2.25a.75.75 0 01.75.75zM6.166 5.106a.75.75 0 001.06 1.06l1.591-1.59a.75.75 0 00-1.06-1.061L6.166 5.106z"/></svg>
+        <svg id="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="display: none;"><path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69a.75.75 0 01.981.981A10.503 10.503 0 0118 19.5a10.5 10.5 0 01-10.5-10.5c0-1.579.34-3.09.952-4.452a.75.75 0 01.819-.162z" clip-rule="evenodd" /></svg>
+    </button>
+    
+    <div id="graph-container"></div>
+
+    <div style="display: none;">
+        <video class="input_video"></video>
+        <canvas class="output_canvas" width="1280px" height="720px"></canvas>
+    </div>
+    
+    <div id="gesture-ui">
+        <h4>🤚 Gesture Controls</h4>
+        <p>
+            <span>Status:</span>
+            <span id="gesture-status" class="status-off">
+                <span class="status-indicator"></span>Inactive
+            </span>
+        </p>
+        <p>
+            <span>Action:</span>
+            <span id="gesture-action">Waiting for hands...</span>
+        </p>
+        <p>
+            <span>Confidence:</span>
+            <span id="gesture-confidence">0%</span>
+        </p>
+        <div class="gesture-instructions">
+            <div>✊+🖐️ <strong>Rotate:</strong> One fist + open palm</div>
+            <div>👌 <strong>Pinch:</strong> Grab & drag nodes</div>
+            <div>✌️ <strong>Two hands:</strong> Zoom in/out</div>
+            <div>👆 <strong>Point:</strong> Click nodes for details</div>
+        </div>
+    </div>
+
+    <div id="detail-panel">
+        <div class="panel-header">
+            <button class="close-btn" onclick="hideDetailPanel()">&times;</button>
+            <div class="detail-title" id="detail-title"></div>
+            <div class="detail-meta" id="detail-meta"></div>
+        </div>
+        <div class="panel-content">
+            <div class="detail-section">
+                <span class="detail-label">👤 Author</span>
+                <div class="detail-value" id="detail-author"></div>
+            </div>
+            <div class="detail-section">
+                <span class="detail-label">📊 Status</span>
+                <div class="detail-value" id="detail-status"></div>
+            </div>
+            <div class="detail-section">
+                <span class="detail-label">📅 Created</span>
+                <div class="detail-value" id="detail-created"></div>
+            </div>
+            <div class="detail-section">
+                <span class="detail-label">📄 File</span>
+                <div class="detail-value" id="detail-filename"></div>
+            </div>
+            <div class="detail-section">
+                <span class="detail-label">📝 Description</span>
+                <div class="detail-value" id="detail-description" style="max-height: 200px; overflow-y: auto;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="static/js/main.js"></script>
+</body>
+</html>

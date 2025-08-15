@@ -1,0 +1,13 @@
+#+TITLE: open-via-debian
+
+* directory 
+:PROPERTIES:
+:id: fea8e7bf-f3cb-4bcf-925b-43241ecc0a08
+:author: bleu
+:status: TODO
+:priority: D
+:created_at: 2025-08-04T15:54:22.628247
+:END:
+
+/media/bleu/OS/Users/bleu/Desktop/LIBURAN/neuroplanv.2/
+

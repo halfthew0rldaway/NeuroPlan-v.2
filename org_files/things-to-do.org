@@ -1,0 +1,39 @@
+#+TITLE: things-to-do
+
+* Things to do 
+:PROPERTIES:
+:id: e380051a-9712-423c-9fc7-ebd279c2b81c
+:author: bleu
+:status: TODO
+:priority: D
+:created_at: 2025-08-04T11:54:14.964714
+:END:
+
+yeah right
+
+** DONE test bug 
+SCHEDULED: <2025-08-06 Wed 12:18>
+:PROPERTIES:
+:id: 0243e7f5-92a3-495a-ba6a-dfeab9a7bd11
+:parent_id: e380051a-9712-423c-9fc7-ebd279c2b81c
+:author: bleu
+:status: DONE
+:priority: D
+:created_at: 2025-08-04T11:55:05.966152
+:END:
+
+terakhir tgl 17 kayaknya deh
+
+* DONE test bug 
+SCHEDULED: <2025-08-06 Wed 12:18>
+:PROPERTIES:
+:id: 0243e7f5-92a3-495a-ba6a-dfeab9a7bd11
+:parent_id: e380051a-9712-423c-9fc7-ebd279c2b81c
+:author: bleu
+:status: DONE
+:priority: D
+:created_at: 2025-08-04T11:55:05.966152
+:END:
+
+terakhir tgl 17 kayaknya deh
+
