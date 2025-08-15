@@ -1,0 +1,15 @@
+#+TITLE: learn-stuff
+
+* learn stuff 
+:PROPERTIES:
+:id: 29e5e3c1-d22c-4df2-817e-14af109c0e6c
+:author: bleu
+:status: TODO
+:priority: D
+:created_at: 2025-08-15T09:46:18.121390
+:END:
+
+2d game dev 
+cyb sec 
+dev ops
+

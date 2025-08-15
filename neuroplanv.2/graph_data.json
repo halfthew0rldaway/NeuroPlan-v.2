@@ -1,0 +1,158 @@
+{
+  "nodes": [
+    {
+      "id": "3519742d-87dd-4227-a86b-ca1f3067da57",
+      "title": "abc",
+      "author": "bleu",
+      "description": "\nidkrt typing your description here... \nabc\n",
+      "status": "TODO",
+      "created_at": "2025-07-27 15:48",
+      "isCentral": false,
+      "val": 15,
+      "parent_id": null
+    },
+    {
+      "id": "00f8cfa9-dad0-4894-abb3-8d4fad7644ae",
+      "title": "idk what it is",
+      "author": "Unknown",
+      "description": "\nidk what it is\n",
+      "status": "TODO",
+      "created_at": "2025-07-27 15:50",
+      "isCentral": false,
+      "val": 15,
+      "parent_id": null
+    },
+    {
+      "id": "b3dbcf22-1ce8-49d2-a686-8cedccd23036",
+      "title": "bleu",
+      "author": "Unknown",
+      "description": "No description available.",
+      "status": "TODO",
+      "created_at": "2025-08-04 17:06",
+      "isCentral": false,
+      "val": 15,
+      "parent_id": null
+    },
+    {
+      "id": "fea8e7bf-f3cb-4bcf-925b-43241ecc0a08",
+      "title": "open via debian",
+      "author": "bleu",
+      "description": "\n/media/bleu/OS/Users/bleu/Desktop/LIBURAN/neuroplanv.2/\n",
+      "status": "TODO",
+      "created_at": "2025-08-04 15:54",
+      "isCentral": false,
+      "val": 15,
+      "parent_id": null
+    },
+    {
+      "id": "e380051a-9712-423c-9fc7-ebd279c2b81c",
+      "title": "Things to do",
+      "author": "bleu",
+      "description": "\nyeah right\n",
+      "status": "TODO",
+      "created_at": "2025-08-04 11:54",
+      "isCentral": false,
+      "val": 15,
+      "parent_id": null
+    },
+    {
+      "id": "0243e7f5-92a3-495a-ba6a-dfeab9a7bd11",
+      "title": "isi krs",
+      "author": "bleu",
+      "description": "\nterakhir tgl 17 kayaknya deh\n",
+      "status": "TODO",
+      "created_at": "2025-08-04 11:55",
+      "isCentral": false,
+      "val": 15,
+      "parent_id": "e380051a-9712-423c-9fc7-ebd279c2b81c"
+    },
+    {
+      "id": "76624c47-c2cd-449d-8345-464a0da4cd75",
+      "title": "wizzy v.2",
+      "author": "bleu",
+      "description": "\ntest another mother files u knw\n",
+      "status": "TODO",
+      "created_at": "2025-07-27 11:39",
+      "isCentral": false,
+      "val": 15,
+      "parent_id": null
+    },
+    {
+      "id": "9a47a58b-723d-4da5-a170-26501bbbd0c7",
+      "title": "personal space",
+      "author": "bleu",
+      "description": "\nu know what it is\n",
+      "status": "TODO",
+      "created_at": "2025-07-27 11:20",
+      "isCentral": false,
+      "val": 15,
+      "parent_id": null
+    },
+    {
+      "id": "945be4e2-497a-4a9a-81ec-6d0c43b2b2db",
+      "title": "game acc",
+      "author": "bleu",
+      "description": "\nval : \nskszaaa \nskszaaa1 \nwizzyforgame \nwijiforgame \nitsmebluxe2 \nitsmebluxe1234\n",
+      "status": "TODO",
+      "created_at": "2025-07-27 13:46",
+      "isCentral": false,
+      "val": 15,
+      "parent_id": "9a47a58b-723d-4da5-a170-26501bbbd0c7"
+    },
+    {
+      "id": "ab4f71b8-5070-42d9-a3fa-f09b75595f02",
+      "title": "next neuroplan update",
+      "author": "bleu",
+      "description": "\n-prolly update the description section to support enter paragraph and etc \n-update with the notification thingy \n-update quick capture feature and store it at inbox.org all of em and make sure the description is proper\n",
+      "status": "TODO",
+      "created_at": "2025-07-27 15:28",
+      "isCentral": false,
+      "val": 15,
+      "parent_id": "9a47a58b-723d-4da5-a170-26501bbbd0c7"
+    },
+    {
+      "id": "fb4738ac-4e91-4289-9a70-f4f61a356a4e",
+      "title": "update2",
+      "author": "bleu",
+      "description": "\nStart typing your description here... \nadd some ascii animation on a different pane, and some ambient info like trivia or ran\ndom fact of the day)\n",
+      "status": "TODO",
+      "created_at": "2025-08-08 10:24",
+      "isCentral": false,
+      "val": 15,
+      "parent_id": "ab4f71b8-5070-42d9-a3fa-f09b75595f02"
+    },
+    {
+      "id": "27349d21-7308-47f8-9bf0-4b9e6d44b534",
+      "title": "test abc",
+      "author": "bleu",
+      "description": "another thest",
+      "status": "TODO",
+      "created_at": "2025-08-11 15:54",
+      "isCentral": true,
+      "val": 50,
+      "parent_id": null
+    }
+  ],
+  "links": [
+    {
+      "source": "0243e7f5-92a3-495a-ba6a-dfeab9a7bd11",
+      "target": "e380051a-9712-423c-9fc7-ebd279c2b81c",
+      "type": "parent"
+    },
+    {
+      "source": "945be4e2-497a-4a9a-81ec-6d0c43b2b2db",
+      "target": "9a47a58b-723d-4da5-a170-26501bbbd0c7",
+      "type": "parent"
+    },
+    {
+      "source": "ab4f71b8-5070-42d9-a3fa-f09b75595f02",
+      "target": "9a47a58b-723d-4da5-a170-26501bbbd0c7",
+      "type": "parent"
+    },
+    {
+      "source": "fb4738ac-4e91-4289-9a70-f4f61a356a4e",
+      "target": "ab4f71b8-5070-42d9-a3fa-f09b75595f02",
+      "type": "parent"
+    }
+  ]
+}

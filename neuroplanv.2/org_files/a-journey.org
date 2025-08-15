@@ -1,0 +1,13 @@
+#+TITLE: a-journey
+
+* test bug12151 
+:PROPERTIES:
+:id: a2db83e5-ac05-4bbe-9614-acbf5cf545f9
+:author: bleu
+:status: TODO
+:priority: D
+:created_at: 2025-08-14T11:05:49.776924
+:END:
+
+start a cyb sec
+
